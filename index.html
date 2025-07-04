@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blerd on Blades - Skate. Teach. Inspire.</title>
+    <link rel="stylesheet" href="spreadsheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Blerd on Blades</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#teaching" class="nav-link">Teaching</a>
+                <a href="#merch" class="nav-link">Merch</a>
+                <a href="#reels" class="nav-link">Reels</a>
+              
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-background" autoplay muted loop>
+            <source src="images and vids/rollerskate.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Skate. Teach. Inspire.</h1>
+            <p class="hero-subtitle">Master the art of rhythm skating with passion and precision</p>
+            <div class="hero-buttons">
+                <a href="#reels" class="btn btn-primary">Watch My Reels</a>
+                <button class="btn btn-secondary" onclick="openBookingModal()">Book a Lesson</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Blerd on Blades</h2>
+                <p>Passion meets precision on wheels</p>
+            </div>
+            <div class="about-content">
+                 <div class="about-image left">
+                     <img src="images and vids/1.jpg" alt="Blerd on Blades">
+                 </div>
+                 <div class="about-text">
+                     <p>Led by Darius Graham, Blerd on Blades is a rhythm skating platform dedicated to teaching, inspiring, and building community. Whether you're a beginner or a seasoned skater, I offer personalized instruction to help you move with confidence, style, and rhythm.</p>
+                 </div>
+                 <div class="about-image right">
+                     <img src="images and vids/roller.jpg" alt="Skating Equipment">
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="teaching">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learn to Skate</h2>
+                <p>I teach rhythm skating for all levels—whether you're just lacing up or ready to groove.</p>
+            </div>
+            <div class="teaching-content">
+                <div class="teaching-left">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Beginner Friendly</h3>
+                    <p>Start your skating journey with confidence. Learn the basics in a supportive environment.</p>
+                    <div class="teaching-cta">
+                        <button class="btn btn-primary" onclick="openBookingModal()">Book a Session</button>
+                    </div>
+                </div>
+                <div class="teaching-right">
+                    <div class="teaching-video">
+                        <video controls>
+                            <source src="images and vids/teaching.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merch Section -->
+    <section id="merch" class="merch">
+        <div class="container">
+            <div class="section-header">
+                <h2>Official Merchandise</h2>
+                <p>Rep the brand with style</p>
+            </div>
+            <div class="product-showcase">
+                <div class="product-image">
+                    <img src="images and vids/clothes.jpg" alt="Blerd Gang Shirts" id="productImage">
+                </div>
+                <div class="product-details">
+                    <h1 class="product-title">Blerd Gang Shirts</h1>
+                    <div class="product-price">
+                        <span class="price-range">$25.00 - $40.00</span>
+                    </div>
+                    <p class="product-description">
+                        Your very own blerd gang shirt in either black or white
+                    </p>
+                    <p class="product-note">
+                        (Please wait 7-14 business days after purchase to receive the product.)
+                    </p>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label class="option-label">Select one *</label>
+                            <select class="product-select" id="colorSelect">
+                                <option value="">Select one</option>
+                                <option value="black">Black - $25.00</option>
+                                <option value="white">White - $40.00</option>
+                            </select>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label class="option-label">Size</label>
+                            <p class="size-note">Select all that apply</p>
+                            <div class="size-options">
+                                <label class="size-option">
+                                    <input type="checkbox" name="size" value="medium">
+                                    <span class="checkmark"></span>
+                                    Medium
+                                </label>
+                                <label class="size-option">
+                                    <input type="checkbox" name="size" value="large">
+                                    <span class="checkmark"></span>
+                                    Large
+                                </label>
+                                <label class="size-option">
+                                    <input type="checkbox" name="size" value="x-large">
+                                    <span class="checkmark"></span>
+                                    X-Large
+                                </label>
+                                <label class="size-option">
+                                    <input type="checkbox" name="size" value="xxl">
+                                    <span class="checkmark"></span>
+                                    XXL
+                                </label>
+                                <label class="size-option">
+                                    <input type="checkbox" name="size" value="small">
+                                    <span class="checkmark"></span>
+                                    Small
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quantity-group">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                        
+                        <div class="subtotal">
+                            <span class="subtotal-label">Subtotal</span>
+                            <p class="subtotal-note">Total will be calculated at checkout</p>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="proceedToCheckout()">
+                            CHECKOUT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Reel Section -->
+    <section id="reels" class="reels">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Reel</h2>
+                <p>Feel the rhythm. Flow with the blades.</p>
+            </div>
+            <div class="reel-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="reel-item active">
+                            <iframe src="https://www.instagram.com/reel/DLGf3FsSaUz/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/DLGf3FsSaUz/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reel-item">
+                            <iframe src="https://www.instagram.com/reel/DK-dYgiBq3v/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/DK-dYgiBq3v/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reel-item">
+                            <iframe src="https://www.instagram.com/reel/C3iKRrhLVQt/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/C3iKRrhLVQt/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reel-item">
+                            <iframe src="https://www.instagram.com/reel/DKjRDABugK7/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/DKjRDABugK7/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reel-item">
+                            <iframe src="https://www.instagram.com/reel/DLVXpJjx7uD/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/DLVXpJjx7uD/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reel-item">
+                            <iframe src="https://www.instagram.com/reel/DLgGQGQubme/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                            <div class="reel-overlay">
+                                <a href="https://www.instagram.com/reel/DLgGQGQubme/" target="_blank" class="reel-link">
+                                    <i class="fab fa-instagram"></i>
+                                    View on Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev-btn" onclick="changeReel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" onclick="changeReel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentReel(1)"></span>
+                    <span class="dot" onclick="currentReel(2)"></span>
+                    <span class="dot" onclick="currentReel(3)"></span>
+                    <span class="dot" onclick="currentReel(4)"></span>
+                    <span class="dot" onclick="currentReel(5)"></span>
+                    <span class="dot" onclick="currentReel(6)"></span>
+                </div>
+            </div>
+            <div class="reel-cta">
+                <a href="https://www.instagram.com/blerd_on_blades/reels/" target="_blank" class="btn-view-all">
+                    <i class="fab fa-instagram"></i>
+                    View All on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book a Lesson</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+        
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" id="bookingName" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="bookingEmail" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="bookingPhone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="sessionType" name="sessionType" required>
+                            <option value="">Select Session Type</option>
+                            <option value="beginner">Beginner Basics - $40/hr</option>
+                            <option value="intermediate">Intermediate Skills - $50/hr</option>
+                            <option value="advanced">Advanced Techniques - $60/hr</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="preferredDate" name="preferredDate" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="bookingMessage" name="message" placeholder="Tell me about your skating experience and goals" rows="4" required></textarea>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-primary">Book Session</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>Blerd on Blades</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/blerd_on_blades/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@blerd_on_blades" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQHfBSq-1TLA3IaX8GkG1JA" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitch.tv/blerd_gaming" target="_blank" class="social-link">
+                        <i class="fab fa-twitch"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Blerd on Blades. All rights reserved. | Darius Graham</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
