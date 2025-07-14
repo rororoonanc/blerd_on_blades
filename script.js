@@ -203,10 +203,13 @@ function initScrollEffects() {
     
     window.addEventListener('scroll', function() {
         const scrolled = window.scrollY;
-        // Keep navbar transparent on scroll
-        navbar.style.background = 'transparent';
-        navbar.style.backdropFilter = 'none';
-        navbar.style.boxShadow = 'none';
+        
+        // Add background when scrolled down
+        if (scrolled > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
         
         // Parallax effect for hero section
         const hero = document.querySelector('.hero');

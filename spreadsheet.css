@@ -64,8 +64,16 @@ body {
     width: 100%;
     background: transparent;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 0.8rem 0; /* Reduced from 1.5rem */
     transition: all 0.3s ease;
+}
+
+/* Add scrolled state for navbar */
+.navbar.scrolled {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0; /* Even smaller padding when scrolled */
 }
 
 .nav-container {
@@ -1487,11 +1495,15 @@ body.menu-open {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem 0;
+        padding: 0.6rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.4rem 0;
     }
     
     .nav-container {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
     
     .nav-logo span {
@@ -1648,7 +1660,53 @@ body.menu-open {
     }
 }
 
+@media (max-width: 768px) {
+    .merch {
+        padding: 4rem 0;
+    }
+    
+    .merch-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .merch-card {
+        height: auto;
+        min-height: 300px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .merch-card .card-image {
+        padding: 1rem;
+    }
+    
+    .merch-card .card-image img {
+        border-radius: 15px;
+        max-height: 280px;
+        object-fit: cover;
+    }
+    
+    .merch-btn-main {
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.3rem 0;
+    }
+    
     .hero {
         height: 100vh;
         padding: 2rem 0;
@@ -1705,15 +1763,41 @@ body.menu-open {
         padding: 2rem;
     }
     
+    .merch {
+        padding: 3rem 0;
+    }
+    
+    .merch-cards {
+        padding: 0 0.5rem;
+        gap: 1rem;
+    }
+    
     .merch-card {
-        height: 250px;
-        width: 250px;
+        min-height: 250px;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .merch-card .card-image {
+        padding: 0.5rem;
+    }
+    
+    .merch-card .card-image img {
+        max-height: 220px;
+        border-radius: 12px;
     }
     
     .merch-btn-main {
         padding: 14px 28px;
         font-size: 1rem;
         min-width: 180px;
+        width: 90%;
+        max-width: 280px;
+    }
+    
+    .merch-cta {
+        margin-top: 2rem;
+        padding: 0 1rem;
     }
     
     .product-title {
@@ -1804,5 +1888,21 @@ body.menu-open {
     
     .teaching-video {
         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .merch-card {
+        min-height: 200px;
+    }
+    
+    .merch-card .card-image img {
+        max-height: 180px;
+    }
+    
+    .merch-btn-main {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 95%;
     }
 }
