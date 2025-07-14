@@ -37,12 +37,13 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
+        <!-- Hero Section -->
         <div class="hero-content">
             <h1 class="hero-title">Skate. Teach. Inspire.</h1>
             <p class="hero-subtitle">Master the art of rhythm skating with confidence and precision</p>
             <div class="hero-buttons">
                 <a href="#reels" class="btn btn-primary">Watch My Reels</a>
-                <button class="btn btn-secondary" onclick="openBookingModal()">Book a Lesson</button>
+                <a href="https://book.squareup.com/appointments/g15v14c2taranq/location/L7P7AE4SD4D5Z/services?fbclid=PAQ0xDSwLQg-ZleHRuA2FlbQIxMAABp7khqvRr8w2QkXuczjBHjoEbX1yS2jQQtQ1KYiibU8O5j4Yqmfd8uUnZ7cTB_aem_dyAyWwZI2xpONhTroh6B_Q" target="_blank" class="btn btn-secondary">Book a Lesson</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -79,6 +80,7 @@
                 <p>I teach rhythm skating for all levels—whether you're just lacing up or ready to groove.</p>
             </div>
             <div class="teaching-content">
+                <!-- Teaching Section -->
                 <div class="teaching-left">
                     <div class="card-icon">
                         <i class="fas fa-star"></i>
@@ -86,7 +88,7 @@
                     <h3>Beginner Friendly</h3>
                     <p>Start your skating journey with confidence. Learn the basics in a supportive environment.</p>
                     <div class="teaching-cta">
-                        <button class="btn btn-primary" onclick="openBookingModal()">Book a Session</button>
+                        <a href="https://book.squareup.com/appointments/g15v14c2taranq/location/L7P7AE4SD4D5Z/services?fbclid=PAQ0xDSwLQg-ZleHRuA2FlbQIxMAABp7khqvRr8w2QkXuczjBHjoEbX1yS2jQQtQ1KYiibU8O5j4Yqmfd8uUnZ7cTB_aem_dyAyWwZI2xpONhTroh6B_Q" target="_blank" class="btn btn-primary">Book a Session</a>
                     </div>
                 </div>
                 <div class="teaching-right">
@@ -223,47 +225,6 @@
     </section>
 
 
-
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Book a Lesson</h2>
-                <span class="modal-close">&times;</span>
-            </div>
-            <div class="modal-body">
-        
-                <form id="bookingForm">
-                    <div class="form-group">
-                        <input type="text" id="bookingName" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="bookingEmail" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="bookingPhone" name="phone" placeholder="Your Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="sessionType" name="sessionType" required>
-                            <option value="">Select Session Type</option>
-                            <option value="beginner">Beginner Basics - $40/hr</option>
-                            <option value="intermediate">Intermediate Skills - $50/hr</option>
-                            <option value="advanced">Advanced Techniques - $60/hr</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="date" id="preferredDate" name="preferredDate" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="bookingMessage" name="message" placeholder="Tell me about your skating experience and goals" rows="4" required></textarea>
-                    </div>
-                    <div class="button-container">
-                        <button type="submit" class="btn btn-primary">Book Session</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
