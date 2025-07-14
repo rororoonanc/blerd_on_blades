@@ -404,19 +404,33 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Simulate form submission
-        const submitBtn = bookingForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Booking...';
-        submitBtn.disabled = true;
+        // Create email subject and body for Gmail
+        const subject = encodeURIComponent('New Skating Lesson Booking Request');
+        const emailBody = encodeURIComponent(
+            `Hi Darius,\n\n` +
+            `I would like to book a skating lesson with the following details:\n\n` +
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Phone: ${phone}\n` +
+            `Session Type: ${sessionType}\n` +
+            `Preferred Date: ${preferredDate}\n\n` +
+            `Message:\n${message}\n\n` +
+            `Please let me know your availability.\n\n` +
+            `Best regards,\n${name}`
+        );
         
+        // Create Gmail compose URL
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=BlerdOnBlades@gmail.com&su=${subject}&body=${emailBody}`;
+        
+        // Open Gmail in a new tab
+        window.open(gmailUrl, '_blank');
+        
+        // Show success message and close modal
+        showNotification('Opening Gmail to send your booking request!', 'success');
         setTimeout(() => {
-            showNotification('Session booking request sent successfully! I\'ll get back to you soon.');
             bookingForm.reset();
             closeBookingModal();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+        }, 1000);
     });
 });
 
